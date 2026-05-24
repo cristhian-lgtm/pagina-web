@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel La Herradura - Habitaciones cómodas y lujosas con vistas panorámicas.">
+    <title>Habitaciones - Hotel La Herradura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid px-3 px-md-5">
+                <a class="navbar-brand fw-bold text-success d-flex align-items-center" href="index.html">
+                    <img src="img/fondo.jpg" alt="Hotel La Herradura Logo" class="rounded-circle me-2" width="40" height="40" style="object-fit: cover;">
+                    <span>Hotel La Herradura</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="entorno.html">El Entorno</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="habitaciones.html">Habitaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="section-padding bg-light">
+            <div class="container px-3 px-md-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bold text-success">Nuestras Habitaciones</h1>
+                    <p class="text-muted lead">Escoge entre nuestras habitaciones diseñadas para comodidad y descanso en un entorno natural.</p>
+                </div>
+
+                <div id="roomCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner rounded-4 shadow-sm overflow-hidden">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=600&fit=crop" class="d-block w-100" alt="Habitación Estándar">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                                <h5>Habitación Estándar</h5>
+                                <p>Cama queen, baño privado y vistas al jardín.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1200&h=600&fit=crop" class="d-block w-100" alt="Habitación Deluxe">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                                <h5>Habitación Deluxe</h5>
+                                <p>Cama king, jacuzzi privado y balcón con vista.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&h=600&fit=crop" class="d-block w-100" alt="Suite Presidencial">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                                <h5>Suite Presidencial</h5>
+                                <p>Terraza privada, sala amplia y servicio concierge.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&h=600&fit=crop" class="d-block w-100" alt="Suite Junior">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                                <h5>Suite Junior</h5>
+                                <p>Espacio cómodo con sala de estar y detalles de lujo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&h=600&fit=crop" class="d-block w-100" alt="Habitación Familiar">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                                <h5>Habitación Familiar</h5>
+                                <p>Perfecta para familias, con dos camas grandes y amplitud.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card border-0 rounded-4 shadow-sm h-100 card-hover">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop" alt="Habitación Estándar" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-success">Habitación Estándar</h5>
+                                <p class="card-text text-muted small">Cama queen, baño privado, minibar y vistas al jardín.</p>
+                                <ul class="list-unstyled small text-muted mb-3">
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Cama Queen</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Baño Privado</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> TV Smart</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h6 text-success fw-bold mb-0">$90/noche</span>
+                                    <a href="contacto.html" class="btn btn-sm btn-success">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card border-0 rounded-4 shadow-sm h-100 card-hover">
+                            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&h=300&fit=crop" alt="Habitación Deluxe" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-success">Habitación Deluxe</h5>
+                                <p class="card-text text-muted small">Cama king, jacuzzi privado y balcón con vista.</p>
+                                <ul class="list-unstyled small text-muted mb-3">
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Jacuzzi Privado</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Balcón Privado</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Minibar Premium</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h6 text-success fw-bold mb-0">$150/noche</span>
+                                    <a href="contacto.html" class="btn btn-sm btn-success">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card border-0 rounded-4 shadow-sm h-100 card-hover">
+                            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=300&fit=crop" alt="Suite Presidencial" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-success">Suite Presidencial</h5>
+                                <p class="card-text text-muted small">Sala amplia, cocina, terraza privada y dormitorio master.</p>
+                                <ul class="list-unstyled small text-muted mb-3">
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Terraza Privada</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Servicio Concierge</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Cocina Completa</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h6 text-success fw-bold mb-0">$250/noche</span>
+                                    <a href="contacto.html" class="btn btn-sm btn-success">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container px-3 px-md-5 text-center">
+            <p class="mb-0 small">&copy; 2026 Hotel La Herradura. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

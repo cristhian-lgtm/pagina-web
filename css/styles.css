@@ -1,0 +1,419 @@
+/* ========================================
+   ESTILOS PERSONALIZADOS - Hotel La Herradura
+   ======================================== */
+
+/* Variables de Color */
+:root {
+    --color-primary: #4a8090;
+    --color-secondary: #3a6070;
+    --color-accent: #788c28;
+    --color-light: #e8f4f8;
+    --color-text: #333;
+    --color-text-muted: #6c757d;
+    --border-radius-lg: 1.5rem;
+    --transition-smooth: all 0.3s ease;
+}
+
+/* ========================================
+   GENERALES
+   ======================================== */
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+a {
+    transition: var(--transition-smooth);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ========================================
+   HEADER Y NAVEGACIÓN
+   ======================================== */
+
+.navbar {
+    padding: 1rem 0;
+    background-color: #fff;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--color-primary) !important;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand:hover {
+    color: var(--color-secondary) !important;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: var(--color-primary) !important;
+    margin-left: 1.5rem;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: var(--transition-smooth);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-primary) !important;
+}
+
+/* ========================================
+   SECCIÓN HERO
+   ======================================== */
+
+.hero-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(20, 30, 40, 0.75), rgba(40, 60, 40, 0.65));
+    z-index: 1;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    animation: slideInDown 0.8s ease-out;
+}
+
+.hero-section p {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-section .btn {
+    animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+/* Animaciones */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+.btn-success {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(0, 102, 51, 0.2);
+}
+
+.btn-success:hover {
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 51, 0.3);
+}
+
+.btn-outline-success {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* ========================================
+   TARJETAS (CARDS)
+   ======================================== */
+
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-smooth);
+    overflow: hidden;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 102, 51, 0.15);
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--color-primary);
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   FORMAS
+   ======================================== */
+
+.form-control,
+.form-select {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 102, 51, 0.25);
+}
+
+.form-label {
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   ÍCONOS
+   ======================================== */
+
+.bi {
+    display: inline-block;
+}
+
+.text-success {
+    color: var(--color-primary) !important;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background-color: #1a1a1a;
+    margin-top: 5rem;
+    border-top: 4px solid var(--color-primary);
+}
+
+/* Ajustes de espaciado y feedback */
+.main-content {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.section-padding {
+    padding: 4rem 0;
+}
+
+.feature-box {
+    transition: var(--transition-smooth);
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+#form-feedback {
+    margin-bottom: 1.5rem;
+}
+
+.alert {
+    border-radius: 1rem;
+}
+
+
+footer a {
+    color: var(--color-text-muted);
+}
+
+footer a:hover {
+    color: var(--color-primary);
+}
+
+footer h5,
+footer h6 {
+    color: var(--color-primary);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+/* Tablets (md) */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 0.5rem 0;
+    }
+
+    .hero-section {
+        min-height: 400px !important;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
+
+/* Móviles (sm) */
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 300px !important;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+    }
+
+    .hero-section .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .display-3 {
+        font-size: 2rem !important;
+    }
+
+    .h1 {
+        font-size: 1.8rem !important;
+    }
+
+    footer h5 {
+        font-size: 1.1rem;
+    }
+
+    .container-fluid {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* Muy pequeños (xs) */
+@media (max-width: 360px) {
+    .hero-section h1 {
+        font-size: 1.25rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+}
+
+/* ========================================
+   UTILIDADES PERSONALIZADAS
+   ======================================== */
+
+.rounded-4 {
+    border-radius: 1.5rem !important;
+}
+
+.shadow-sm-custom {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.font-size-lg {
+    font-size: 1.125rem;
+}
+
+.opacity-8 {
+    opacity: 0.8;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Transiciones de vista */
+section {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
